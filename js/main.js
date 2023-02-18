@@ -14,7 +14,7 @@ function shrink() {
 
 
 
-$('.owl-carousel').owlCarousel({
+$('.corousel_1').owlCarousel({
   loop: true,
   margin: 10,
   nav: true,
@@ -26,7 +26,24 @@ $('.owl-carousel').owlCarousel({
       items: 3
     },
     1000: {
-      items: 4
+      items: 4  
+    }
+  }
+})
+
+$('.corousel_2').owlCarousel({
+  loop: true,
+  margin: 10,
+  nav: true,
+  responsive: {
+    0: {
+      items: 1
+    },
+    600: {
+      items: 2
+    },
+    1000: {
+      items: 3
     }
   }
 })
@@ -60,3 +77,30 @@ for (let i = 0; i < tabs.length; i++) {
     getActiveTab(i);
   });
 }
+
+$('.ins_corousel').owlCarousel({
+  items:3,
+  loop:false,
+  center:true,
+  URLhashListener:true,
+  autoplayHoverPause:true,
+  startPosition: 'URLHash'
+});
+
+('.owl-carousel').owlCarousel11({
+  loop:true,
+  margin:20,
+  nav:true,
+  responsive:{
+      0:{
+          items:1
+      },
+      600:{
+          items:2
+      },
+      1000:{
+          items:3
+      }
+  }
+})
+
