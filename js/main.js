@@ -87,20 +87,36 @@ $('.ins_corousel').owlCarousel({
   startPosition: 'URLHash'
 });
 
-('.owl-carousel').owlCarousel11({
-  loop:true,
-  margin:20,
-  nav:true,
-  responsive:{
-      0:{
-          items:1
-      },
-      600:{
-          items:2
-      },
-      1000:{
-          items:3
-      }
+
+
+// ('.owl-carousel').owlCarousel11({
+//   loop:true,
+//   margin:20,
+//   nav:true,
+//   responsive:{
+//       0:{
+//           items:1
+//       },
+//       600:{
+//           items:2
+//       },
+//       1000:{
+//           items:3
+//       }
+//   }
+// })
+
+window.addEventListener("scroll", function () {
+  toggleBacktop();
+});
+
+let backtop = document.getElementById("backtop");
+
+function toggleBacktop() {
+  if (document.body.scrollTop > 200 || document.documentElement.scrollTop > 200) {
+    backtop.style.opacity = 1;
+  } else {
+    backtop.style.opacity = 0;
   }
-})
+}
 
